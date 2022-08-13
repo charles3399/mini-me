@@ -82,12 +82,12 @@ const showingNavigationDropdown = ref(false);
                         <BreezeResponsiveNavLink :href="route('feeds')" :active="route().current('feeds')">
                             Feeds
                         </BreezeResponsiveNavLink>
-                        <BreezeNavLink :href="route('followers')" :active="route().current('followers')">
+                        <BreezeResponsiveNavLink :href="route('followers')" :active="route().current('followers')">
                             Followers
-                        </BreezeNavLink>
-                        <BreezeNavLink :href="route('people')" :active="route().current('people')">
+                        </BreezeResponsiveNavLink>
+                        <BreezeResponsiveNavLink :href="route('people')" :active="route().current('people')">
                             People
-                        </BreezeNavLink>
+                        </BreezeResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
