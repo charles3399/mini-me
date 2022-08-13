@@ -20,15 +20,21 @@ const showingNavigationDropdown = ref(false);
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="route('feeds')">
                                     <BreezeApplicationLogo class="block h-9 w-auto" />
                                 </Link>
                             </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                <BreezeNavLink :href="route('feeds')" :active="route().current('feeds')">
+                                    Feeds
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('followers')" :active="route().current('followers')">
+                                    Followers
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('people')" :active="route().current('people')">
+                                    People
                                 </BreezeNavLink>
                             </div>
                         </div>
@@ -73,9 +79,15 @@ const showingNavigationDropdown = ref(false);
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                        <BreezeResponsiveNavLink :href="route('feeds')" :active="route().current('feeds')">
+                            Feeds
                         </BreezeResponsiveNavLink>
+                        <BreezeNavLink :href="route('followers')" :active="route().current('followers')">
+                            Followers
+                        </BreezeNavLink>
+                        <BreezeNavLink :href="route('people')" :active="route().current('people')">
+                            People
+                        </BreezeNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
