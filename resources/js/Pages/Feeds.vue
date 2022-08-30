@@ -8,9 +8,12 @@ import { Head } from '@inertiajs/inertia-vue3';
 
     <BreezeAuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Feeds
-            </h2>
+            <div class="flex justify-start flex-row items-center gap-4">
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                    Feeds
+                </h2>
+                <button class="bg-green-700 text-white rounded-md px-3 text-lg font-bold">+</button>
+            </div>
         </template>
 
         <div class="py-12">
